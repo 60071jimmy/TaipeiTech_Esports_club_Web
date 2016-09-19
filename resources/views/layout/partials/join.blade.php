@@ -8,10 +8,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="joinForm" novalidate>
+                <div class="col-lg-12">                    
                         <div class="row">
-                            <form action="/join" method="POST" class="form-horizontal">
+                            <form action="{{ url('join') }}" method="POST" class="form-horizontal">
                                 {{ csrf_field() }}
 
                                 
@@ -25,7 +24,6 @@
                                 
                                 <div class="form-group">
                                     <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
                                         <button type="submit" class="btn btn-xl">Send</button>
                                         
                                     </div>
@@ -58,7 +56,6 @@
                                 <button type="submit" class="btn btn-xl">Send</button>
                             </div-->
                         </div>
-                    </form>
                 </div>
             </div>
         </div>

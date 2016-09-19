@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
-use App\Http\Requests;
 use App\Join;
 
 class JoinController extends Controller
@@ -30,6 +30,8 @@ class JoinController extends Controller
         'name' => 'required|max:255',
         ]);
 
+        print_r($request->all());
+
         if ($validator->fails()) {
         return redirect('/')
             ->withInput()
@@ -37,7 +39,7 @@ class JoinController extends Controller
         }
 
         $join = new Join;
-        $join->name = $request->$name;
+        $join->name = $request->name;
         $join->save();
 
         return redirect('/');

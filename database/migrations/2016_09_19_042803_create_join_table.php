@@ -13,7 +13,7 @@ class CreateJoinTable extends Migration
      */
     public function up()
     {
-         Schema::create('join', function (Blueprint $table) {
+         Schema::create('joins', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('class');
@@ -36,6 +36,6 @@ class CreateJoinTable extends Migration
      */
     public function down()
     {
-         Schema::drop('join');
+         Schema::drop('joins');
     }
 }

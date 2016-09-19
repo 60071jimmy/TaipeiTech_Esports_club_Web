@@ -15,7 +15,7 @@ class Create2016GarenaWorkersTable extends Migration
     {
         Schema::create('2016garenaWorkers', function (Blueprint $table) {
             $table->integer('member_id')->unsigned();
-            $table->foreign('member_id')->references('id')->on('join');
+            $table->foreign('member_id')->references('id')->on('joins');
             $table->string('willing');
             $table->string('category')->nullable();
             $table->rememberToken();
