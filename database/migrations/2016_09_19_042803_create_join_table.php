@@ -17,7 +17,7 @@ class CreateJoinTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('class');
-            $table->string('student_id')->uniqid();
+            $table->string('student_id')->unique();
             $table->string('gender');
             $table->string('facebook_url');
             $table->string('clubs_experience');

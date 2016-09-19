@@ -10,7 +10,9 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::group(['middleware' => 'web'], function() {
 
-Route::get('/','JoinController@index');
-Route::post('/join','JoinController@create');
-
+	Route::get('/','JoinController@index');
+	Route::post('/join','JoinController@create');
+	
+});

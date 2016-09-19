@@ -14,6 +14,7 @@ class JoinController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         return view('index');
@@ -27,10 +28,16 @@ class JoinController extends Controller
     public function create(Request $request)
     {
         $validator = Validator::make($request->all(), [
-        'name' => 'required|max:255',
+        'name' => 'required|max:30',
+        'class' => 'required|max:30',
+        'student_id' => 'required|unique:joins|max:20',
+        'gender' => 'required|max:2',
+        'facebook_url' => 'required',
+        'clubs_experience' => 'required',
+        'activities_experience' => 'required',
+        'games' => 'required',
+        'join_motivation' => 'required',
         ]);
-
-        print_r($request->all());
 
         if ($validator->fails()) {
         return redirect('/')
@@ -40,7 +47,26 @@ class JoinController extends Controller
 
         $join = new Join;
         $join->name = $request->name;
+        $join->class = $request->class;
+        $join->student_id = $request->student_id;
+        $join->gender = $request->gender;
+        $join->facebook_url = $request->facebook_url;
+        $join->clubs_experience = $request->clubs_experience;
+        $join->activities_experience = $request->activities_experience;
+
+        if(count($request->games)>0){
+            $games_array = $request->games;
+            foreach ($games_array as $game ) {
+                $join->games_experience .=$game .",";
+            }
+            $join->games_experience = $request->other_games? $join->games_experience.$request->other_games : substr($join->games_experience, 0, -1);
+        }
+        
+        $join->join_motivation = $request->join_motivation;
         $join->save();
+
+        //print_r($request->games) ;
+         \Session::flash('flash_message', '已提交申請表');
 
         return redirect('/');
 
