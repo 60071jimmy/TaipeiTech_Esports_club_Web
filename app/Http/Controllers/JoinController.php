@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Join;
 
 class JoinController extends Controller
 {
@@ -23,9 +24,24 @@ class JoinController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+        'name' => 'required|max:255',
+        ]);
+
+        if ($validator->fails()) {
+        return redirect('/')
+            ->withInput()
+            ->withErrors($validator);
+        }
+
+        $join = new Join;
+        $join->name = $request->$name;
+        $join->save();
+
+        return redirect('/');
+
     }
 
     /**
@@ -34,11 +50,9 @@ class JoinController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $input = $request->get();
         //
-        return Redirect::to('join');
     }
 
     /**

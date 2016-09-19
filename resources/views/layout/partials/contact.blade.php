@@ -1,4 +1,4 @@
- <!-- Team Section -->
+ <!-- Contact Section -->
     <section id="contact" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -9,7 +9,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="team-member">
+                    <div class="contact-member">
                         <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
                         <h4>Kay Garland</h4>
                         <p class="text-muted">Lead Designer</p>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="team-member">
+                    <div class="contact-member">
                         <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
                         <h4>Larry Parker</h4>
                         <p class="text-muted">Lead Marketer</p>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="team-member">
+                    <div class="contact-member">
                         <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
                         <h4>Diana Pertersen</h4>
                         <p class="text-muted">Lead Developer</p>

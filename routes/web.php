@@ -12,4 +12,5 @@
 */
 
 Route::get('/','JoinController@index');
+Route::post('/join','JoinController@create');
 

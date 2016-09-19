@@ -15,11 +15,11 @@
                                 
                             </div>
                         </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                        <img src="img/download/marketing.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>賽事企劃</h4>
-                        <p class="section-subheading text-muted">我們不是冠軍，但我們創造冠軍。</p>
+                        <p class="text-muted">我們不是冠軍，<br>但我們創造冠軍。</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 portfolio-item">
@@ -29,11 +29,11 @@
                                 
                             </div>
                         </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                        <img src="img/download/boarder.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4 >賽事轉播</h4>
-                        <p class="section-subheading text-muted">選手的光芒，由我們替他發揚。</p>
+                        <p class="section-subheading text-muted">選手的光芒，<br>由我們替他發揚。</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 portfolio-item">
@@ -43,11 +43,11 @@
                                 
                             </div>
                         </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
+                        <img src="img/download/cast.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4 style="font-family:'微軟正黑體', 'Microsoft JhengHei';">主播賽評</h4>
-                        <p class="section-subheading text-muted">跟著我們的聲音，進入電競的世界。</p>
+                        <p class="section-subheading text-muted">跟著我們的聲音，<br>進入電競的世界。</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 portfolio-item">
@@ -57,11 +57,11 @@
                                 
                             </div>
                         </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
+                        <img src="img/download/gamer.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4> 電競選手</h4>
-                        <p class="section-subheading text-muted">不放手，直到夢想到手。</p>
+                        <p class="section-subheading text-muted">不放手，<br>直到夢想到手。</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>賽事企劃</h2>
                                 <p class="item-intro text-muted">我們不是冠軍，但我們創造冠軍。</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
+                                <img class="img-responsive img-centered" src="img/download/marketing.jpg" alt="">
                                 <p>一份企劃決定一場比賽及活動的品質，<br>
                                 如何給選手一個良好的比賽環境？<br>
                                 如何給觀眾一場精彩的演出？<br>
@@ -130,7 +130,7 @@
                             <div class="modal-body">
                                 <h2>賽事轉播</h2>
                                 <p class="item-intro text-muted">選手的光芒，由我們替他發揚。</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
+                                <img class="img-responsive img-centered" src="img/download/boarder.jpg" alt="">
                                 <p>
                                 選手們的精采操作不會自己出現在我們眼前，<br>
                                 需要由轉播組精準地捕捉，<br>
@@ -166,7 +166,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>主播賽評</h2>
                                 <p class="item-intro text-muted">跟著我們的聲音，進入電競的世界。</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <img class="img-responsive img-centered" src="img/download/cast.jpg" alt="">
                                 @if(false)
                                 <!--p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p-->
@@ -204,7 +204,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>電競選手</h2>
                                 <p class="item-intro text-muted">不放手，直到夢想到手。</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
+                                <img class="img-responsive img-centered" src="img/download/gamer.jpg" alt="">
                                 <p>
                                 舞台上，聚光燈追逐的焦點，<br>
                                 但相比在舞台上綻放的時間，<br>

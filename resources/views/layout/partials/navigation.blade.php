@@ -7,10 +7,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <!--a class="navbar-brand page-scroll" href="#page-top" style="font-family:Microsoft JhengHei;">北科電競社</a-->
-                <a class="navbar-brand page-scroll" href="#page-top">Taipei Tech e-Sports</a>
-
-                <a class="navbar-brand page-scroll" href="#page-top" >北科電競社</a>
-
+                <a class="navbar-brand page-scroll" href="#page-top">Taipei Tech e-Sports 北科電競社</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

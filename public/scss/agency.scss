@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:$min-width) {
     .navbar-custom {
         background-color: transparent;
         padding: 25px 0;
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Navbar Change on Scroll
 
-@media(min-width:768px) {
+@media(min-width:$min-width) {
     .navbar-custom.affix {
         background-color: $gray-darker;
         padding: 10px 0;
@@ -194,7 +194,7 @@ header {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:$min-width) {
     header {
         .intro-text {
             padding-top: 300px;
@@ -234,29 +234,29 @@ section {
         font-weight: 400;
         margin-bottom: 75px;
     }
-    .section-subheading{
+    .section-subheading {
         p {
             font-style: italic;
         }
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:$min-width) {
     section {
         padding: 150px 0;
     }
 }
 
-// Services Section
+// About Section
 
 .about-heading {
     margin: 15px 0;
     text-transform: none;
 }
 
-// Portfolio Section
+// Team Section
 
-#portfolio {
+#team {
     .portfolio-item {
         margin: 0 0 15px;
         right: 0;
@@ -320,7 +320,7 @@ section {
 }
 
 @media(min-width:767px) {
-    #portfolio {
+    #team {
         .portfolio-item {
             margin: 0 0 30px;
         }
@@ -430,7 +430,7 @@ section {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:$min-width) {
     .timeline {
         &:before {
             left: 50%;
@@ -464,7 +464,7 @@ section {
     }
 }
 
-@media(min-width:992px) {
+@media(min-width:$min-width) {
     .timeline {
         > li {
             min-height: 150px;
@@ -510,9 +510,9 @@ section {
     }
 }
 
-// Team Section
+// Contact Section
 
-.team-member {
+.contact-member {
     text-align: center;
     margin-bottom: 50px;
     img {
@@ -537,9 +537,9 @@ aside.clients {
     }
 }
 
-// Contact Section
+// Join Section
 
-section#contact {
+section#join {
     background-color: $gray-darker;
     background-image: url('../img/map-image.png');
     background-position: center;
@@ -586,6 +586,24 @@ section#contact {
     }
     .text-danger {
         color: $theme-danger;
+    }
+    .text-head {
+        h2 {
+            font-size: 80px;
+            @include heading-font;
+            position: relative;
+            top: -80px;
+            color: white;
+        }
+        h3 {
+            font-size: 16px;
+            @include serif-font;
+            position: relative;
+            top: -100px;
+            text-transform: none;
+            font-style: italic;
+            color: white;
+        }
     }
 }
 
