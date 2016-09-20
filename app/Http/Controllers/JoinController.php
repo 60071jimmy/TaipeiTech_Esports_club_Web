@@ -66,7 +66,13 @@ class JoinController extends Controller
         $join->save();
 
         //print_r($request->games) ;
-         \Session::flash('flash_message', '已提交申請表');
+        flash('歡迎加入電競社<br>
+            粉絲專頁：<a href="https://www.facebook.com/TaipeiTechESport">https://www.facebook.com/TaipeiTechESport</a><br>
+            社團網址：<a href="https://www.facebook.com/groups/741022806041779/">https://www.facebook.com/groups/741022806041779/</a><br>
+            北科校際盃正火熱招募工作人員中~<br>
+            歡迎有興趣的同學與我們一同見證冠軍的誕生。<br>
+            決賽日期暫定於12月中旬<br>
+            (詳細請聯絡社團幹部)');
 
         return redirect('/');
 

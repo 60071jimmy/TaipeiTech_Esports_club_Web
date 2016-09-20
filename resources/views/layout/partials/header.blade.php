@@ -17,13 +17,14 @@
 		    </div>
 			@endif
 
-			@if(Session::has('flash_message'))
-			    <div class="alert alert-success">
-		        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> {{ session('flash_message') }}
-		        </div>
+			@if (session()->has('flash_notification.message'))
+			    <div class="alert alert-{{ session('flash_notification.level') }}">
+			        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+			        {!! session('flash_notification.message') !!}
+			    </div>
 			@endif
-
-
+				
                 <div class="intro-lead-in">北科電競社</div>
                 <div class="intro-heading"></div>
                 <a href="#about" class="page-scroll btn btn-xl">關於我們</a>

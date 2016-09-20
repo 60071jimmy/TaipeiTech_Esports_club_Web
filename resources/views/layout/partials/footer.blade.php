@@ -21,7 +21,10 @@
         </div>
     </footer>
 
-
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script> $('#flash-overlay-modal').modal(); </script>
+    <!--script> $('div.alert').not('.alert-important').delay(3000).fadeOut(350); </script-->
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
