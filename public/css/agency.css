@@ -231,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
-  padding: 20px 40px; }
+  padding: 7px 40px; }
   .btn-xl:focus, .btn-xl.focus {
     color: white;
     background-color: #2c6ca0;
@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: padding 0.3s;
     border: none; }
     .navbar-custom .navbar-brand {
-      font-size: 2em;
+      font-size: 3em;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
     .navbar-custom .navbar-nav > .active > a {

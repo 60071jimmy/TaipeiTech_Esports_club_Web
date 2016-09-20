@@ -1,16 +1,27 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+<html prefix="og: http://ogp.me/ns#">
 <head>
+    <!-- Property -->
+    <meta property="og:title" content="Taipei Tech e-Sports - 北科電競社"></meta>
+    <meta property="og:type" content="website"></meta>
+    <meta property="og:url" content="http://ntut-esports.servegame.com/"></meta>
+    <meta property="og:image" content="http://i.imgur.com/R2qYSMY.png"></meta>
+    <meta property="og:description" content="關於我們、四大團隊、近期活動、聯絡我們、加入社團"></meta>
+    <meta property="og:site_name" content="Taipei Tech e-Sports - 北科電競社"></meta>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Taipei Tech e-Sports - 北科電競社</title>
+
+     
+
+
+
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +35,9 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
+    
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

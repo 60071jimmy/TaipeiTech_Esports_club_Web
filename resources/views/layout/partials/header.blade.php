@@ -25,7 +25,7 @@
 
 
                 <div class="intro-lead-in">北科電競社</div>
-                <div class="intro-heading">It's Nice To Meet You</div>
+                <div class="intro-heading"></div>
                 <a href="#about" class="page-scroll btn btn-xl">關於我們</a>
             </div>
         </div>
