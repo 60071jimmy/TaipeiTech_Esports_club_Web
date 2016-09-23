@@ -2,16 +2,10 @@
 
 @section('content')
 
-
-    @foreach ($members as $member)
-        {{ $member->name }}
-    @endforeach
-
-
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tables</h1>
+                    <h1 class="page-header">北科電競社</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -20,36 +14,46 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            DataTables Advanced Tables
+                            入社名單
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>Rendering engine</th>
-                                        <th>Browser</th>
-                                        <th>Platform(s)</th>
-                                        <th>Engine version</th>
-                                        <th>CSS grade</th>
+                                        <th>#</th>
+                                        <th>姓名</th>
+                                        <th>班級</th>
+                                        <th>學號</th>
+                                        <th>性別</th>
+                                        <th>Fackbook</th>
+                                        <th>入社動機</th>
+                                        <th>入社時間</th>
+                                        <th>詳細</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="odd gradeX">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 4.0</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">4</td>
-                                        <td class="center">X</td>
+                                @php($count=0)
+                                @foreach ($members as $member)
+                                
+                                    @if ( $count%2 == 1  )
+                                    <tr class="gradeA odd">
+                                    @else
+                                    <tr class="gradeA even">
+                                    @endif
+                                        <td>{{ $member->id }}</td>
+                                        <td>{{ $member->name }}</td>
+                                        <td>{{ $member->class }}</td>
+                                        <td>{{ $member->student_id }}</td>
+                                        <td>{{ $member->gender }}</td>
+                                        <td><a href="{{ $member->facebook_url }}">{{ $member->facebook_url }}</a></td>
+                                        <td>{{ $member->join_motivation}}</td>
+                                        <td>{{ $member->created_at }}</td>
+                                        <td> 還沒做 </td>
                                     </tr>
-                                    <tr class="even gradeC">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 5.0</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">5</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    
+
+                                @php ($count++)
+                                @endforeach
                                 </tbody>
                             </table>
 

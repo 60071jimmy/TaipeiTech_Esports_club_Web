@@ -13,17 +13,6 @@ class AdminController extends Controller
 {   
 
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest', ['except' => 'logout']);
-    }
-
-
-    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -32,7 +21,8 @@ class AdminController extends Controller
     {   
         if (Auth::check()) {
             // 已登入        
-            $members = Join::paginate(15);
+            //$members = Join::paginate(15);
+             $members = Join::all();
             return view('admin/admin',compact('members'));
         }
         return view('admin/login');
@@ -118,18 +108,13 @@ class AdminController extends Controller
             ->withErrors($validator);
         }
 
-        $userdata = array(
-            'name'     => $request->name,
-            'password'  =>  $request ->password,
-        );
-
-        if (Auth::attempt($userdata)) {
+        if (Auth::attempt(['name' => $request->name, 'password' => $request->password,'isAdmin' => '1'])) {
 
             // validation successful!
             // redirect them to the secure section or whatever
             // return Redirect::to('secure');
             // for now we'll just echo success (even though echoing in a controller is bad)
-            echo 'SUCCESS!';
+            return redirect('admin');
 
         } else {        
 
@@ -138,5 +123,10 @@ class AdminController extends Controller
 
         }
 
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('admin');
     }
 }

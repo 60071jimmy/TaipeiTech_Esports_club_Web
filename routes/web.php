@@ -16,4 +16,5 @@ Route::group(['middleware' => 'web'], function() {
 	Route::post('/join','JoinController@create');
 	Route::get('/admin','AdminController@index');
 	Route::post('/admin/login','AdminController@login');
+	Route::get('/admin/logout','AdminController@logout');
 });
