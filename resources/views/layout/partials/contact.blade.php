@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">聯絡我們</h2>
-                    <h3 class="section-subheading text-muted">任何疑難雜症都可以跟我們說！</h3>
+                    <h3 class="section-subheading text-muted">Contact us!</h3>
                 </div>
             </div>
             <div class="row">

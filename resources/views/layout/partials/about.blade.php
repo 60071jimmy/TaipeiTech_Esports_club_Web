@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading" >北科電競社</h2>
-                    <h3 class="section-subheading text-muted" >For the e-Sports</h3>
+                    <h2 class="section-heading" >社團宗旨</h2>
+                    <h3 class="section-subheading text-muted" >The Tenet</h3>
                 </div>
             </div>
             <div class="row text-center">

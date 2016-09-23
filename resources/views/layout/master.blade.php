@@ -24,7 +24,7 @@
 
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -35,9 +35,16 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
-    
+
     <!-- Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+
+ 
+
+
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

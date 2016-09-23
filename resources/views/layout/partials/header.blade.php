@@ -2,6 +2,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
+            
             @if (count($errors) > 0)
 		    <!-- Form Error List -->
 		    <div class="alert alert-danger">
@@ -25,9 +26,10 @@
 			    </div>
 			@endif
 				
-                <div class="intro-lead-in">北科電競社</div>
-                <div class="intro-heading"></div>
-                <a href="#about" class="page-scroll btn btn-xl">關於我們</a>
+				<div class="intro-heading">北科電競社</div>
+                <div class="intro-lead-in">For the e-Sports</div>
+
+                <a href="#join" class="page-scroll btn btn-xl">加入社團</a>
             </div>
         </div>
     </header>
