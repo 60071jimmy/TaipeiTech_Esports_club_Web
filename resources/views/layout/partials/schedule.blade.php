@@ -10,20 +10,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2016/09/20 - 2016/09/22</h4>
-                                    <h4 class="subheading">社團博覽會</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">我們的攤位在北科人文廣場，紅樓旁邊，<br>快來拍照打卡，加入社團喔！</p>
-                                </div>
-                            </div>
-                        </li>
+                        
                         <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">

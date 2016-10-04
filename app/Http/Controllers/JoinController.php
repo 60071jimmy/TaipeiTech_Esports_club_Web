@@ -9,6 +9,13 @@ use App\Join;
 
 class JoinController extends Controller
 {
+
+    public function __construct()
+    {
+        //未來要改成經由auth and admin
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +24,8 @@ class JoinController extends Controller
 
     public function index()
     {   
-        return view('index');
+        $members = Join::all();
+        return view('admin/joinlist',compact('members'));
     }
 
     /**
@@ -27,55 +35,7 @@ class JoinController extends Controller
      */
     public function create(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-        'name' => 'required|max:30',
-        'class' => 'required|max:30',
-        'student_id' => 'required|unique:joins|max:20',
-        'gender' => 'required|max:2',
-        'facebook_url' => 'required',
-        'clubs_experience' => 'required',
-        'activities_experience' => 'required',
-        'games' => 'required',
-        'join_motivation' => 'required',
-        ]);
-
-        if ($validator->fails()) {
-        return redirect('/')
-            ->withInput()
-            ->withErrors($validator);
-        }
-
-        $join = new Join;
-        $join->name = $request->name;
-        $join->class = $request->class;
-        $join->student_id = $request->student_id;
-        $join->gender = $request->gender;
-        $join->facebook_url = $request->facebook_url;
-        $join->clubs_experience = $request->clubs_experience;
-        $join->activities_experience = $request->activities_experience;
-
-        if(count($request->games)>0){
-            $games_array = $request->games;
-            foreach ($games_array as $game ) {
-                $join->games_experience .=$game .",";
-            }
-            $join->games_experience = $request->other_games? $join->games_experience.$request->other_games : substr($join->games_experience, 0, -1);
-        }
-        
-        $join->join_motivation = $request->join_motivation;
-        $join->save();
-
-        //print_r($request->games) ;
-        flash('歡迎加入電競社<br>
-            粉絲專頁：<a href="https://www.facebook.com/TaipeiTechESport">https://www.facebook.com/TaipeiTechESport</a><br>
-            社團網址：<a href="https://www.facebook.com/groups/741022806041779/">https://www.facebook.com/groups/741022806041779/</a><br>
-            北科校際盃正火熱招募工作人員中~<br>
-            歡迎有興趣的同學與我們一同見證冠軍的誕生。<br>
-            決賽日期暫定於12月中旬<br>
-            (詳細請聯絡社團幹部)');
-
-        return redirect('/');
-
+      
     }
 
     /**
@@ -96,8 +56,9 @@ class JoinController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $member = Join::all()->find($id);
+        return view('admin/joindetail',compact('member'));
     }
 
     /**

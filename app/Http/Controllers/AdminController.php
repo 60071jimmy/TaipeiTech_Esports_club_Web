@@ -22,8 +22,8 @@ class AdminController extends Controller
         if (Auth::check()) {
             // 已登入        
             //$members = Join::paginate(15);
-             $members = Join::all();
-            return view('admin/admin',compact('members'));
+             
+            return redirect('admin/join');
         }
         return view('admin/login');
         

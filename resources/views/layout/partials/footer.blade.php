@@ -6,7 +6,7 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://www.facebook.com/TaipeiTechESport/" target="_blank" ><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://www.facebook.com/TaipeiTechESports/" target="_blank" ><i class="fa fa-facebook"></i></a>
                     </ul>
                 </div>
                 <div class="col-md-4">

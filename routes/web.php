@@ -12,9 +12,14 @@
 */
 Route::group(['middleware' => 'web'], function() {
 
-	Route::get('/','JoinController@index');
-	Route::post('/join','JoinController@create');
+	Route::get('/','LandingPageController@index');
+	Route::post('/join','LandingPageController@createJoin');
+
 	Route::get('/admin','AdminController@index');
 	Route::post('/admin/login','AdminController@login');
 	Route::get('/admin/logout','AdminController@logout');
+
+
+	Route::get('/admin/join','JoinController@index');
+	Route::get('/admin/join/detail/{id}','JoinController@show');
 });
