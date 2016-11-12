@@ -30,17 +30,26 @@ class ApiController extends Controller
      */
     public function index($postID)
     {   
+        $token="EAAU5XAe6Ii0BAM55U8oTpMWMkdOQwvtfrt0KYQBV93Tcv9Gg5ZBKC767BdBXbgHuy9EuQJaDJrEHknSHgb2DIxVab5RSPiMzJr30x9WVM9ju04Du2U9x4j5sWYvLki4ffrFeNPAQh6VKdHM5NV9Mqd9VLarMY3zxFoZCGhHwZDZD";
         $ID='857268977677559_'.$postID;
-        $url =  ("https://graph.facebook.com/v2.8/?ids=".$ID."&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&access_token=EAAU5XAe6Ii0BAM55U8oTpMWMkdOQwvtfrt0KYQBV93Tcv9Gg5ZBKC767BdBXbgHuy9EuQJaDJrEHknSHgb2DIxVab5RSPiMzJr30x9WVM9ju04Du2U9x4j5sWYvLki4ffrFeNPAQh6VKdHM5NV9Mqd9VLarMY3zxFoZCGhHwZDZD");
+        
+        $url =  ("https://graph.facebook.com/v2.8/?ids=".$ID.
+            "&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),".
+            "reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),".
+            "reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),".
+            "reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),".
+            "reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),".
+            "reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&".
+            "access_token=".$token);
 
 
         $json = file_get_contents($url);
         $json_data = json_decode($json, true);
         //print_r($json_data);
-        $like_count = $json_data[$ID]['reactions_like']['summary']['total_count'];
         $heart_count = $json_data[$ID]['reactions_love']['summary']['total_count'];
+        $haha_count = $json_data[$ID]['reactions_haha']['summary']['total_count'];
 
-        return view('api',compact(['like_count','heart_count']));
+        return view('api',compact(['heart_count','haha_count','postID']));
     }
 
     /**

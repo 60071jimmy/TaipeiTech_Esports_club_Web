@@ -1,6 +1,7 @@
 @extends('layout.master')
 
 @section('content')
+<meta http-equiv="refresh" content="5;url='http://ntut-esports.servegame.com/api/{{$postID}}" />
 <style>
         html {
           box-sizing: border-box;
@@ -12,7 +13,7 @@
         }
         body{
             margin: 0;
-            background:url('') no-repeat; /* IMAGE NAME HERE */
+            background:url('/img/vote/background.png') no-repeat; /* IMAGE NAME HERE */
             color: #F00;
             width: 100%;
             height: 100%;
@@ -39,25 +40,30 @@
             top: 50%;
             left: 10%;
         }
-        .likes img {
-            position: absolute;
-            top: 0%;
-            left: 25%;
-        }
         .heart {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+        .heart img {
+            position: absolute;
+            top: 90%;
+            left: 36%;
+        }
+        .happy {
             position: absolute;
             top: 50%;
             right: 10%;
         }
-        .heart img {
+        .happy img {
             position: absolute;
-            top: 50%;
-            right: 25%;
+            top: 90%;
+            right: 36%;
         }
         .sad {
             position: absolute;
-            top: 77.5%;
-            left: 5%;
+            top: 50%;
+            right: 10%;
         }
         .fml {
             position: absolute;
@@ -75,9 +81,11 @@
             right: 10%;
         }
     </style>
-<div class="tc wf likes">{{$like_count}}
-      <!--img src="/img/download/marketing.jpg"-->
+<div class="tc wf heart">{{$heart_count}}
+    <img src="/img/vote/fb-love.png">
 </div>
-<div class="tc wf heart">{{$heart_count}}</div>
+<div class="tc wf happy">{{$haha_count}}
+    <img src="/img/vote/fb-haha.png">
+</div>
 
 @endsection
