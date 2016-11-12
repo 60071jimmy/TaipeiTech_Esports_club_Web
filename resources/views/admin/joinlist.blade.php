@@ -67,6 +67,6 @@
     </div>
 </div>
 
-@include('admin.layout.footer')
+@include('admin.<layout class="footer"></layout>')
 
 @endsection

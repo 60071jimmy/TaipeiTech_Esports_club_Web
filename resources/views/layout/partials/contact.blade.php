@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="contact-member">
                         <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
                         <h4>曾彥儒</h4>
@@ -19,7 +19,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="contact-member">
                         <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
                         <h4>曾柏維</h4>
@@ -30,7 +30,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                 <div class="col-sm-3">
+                    <div class="contact-member">
+                        <img src="img/team/4.jpg" class="img-responsive img-circle" alt="">
+                        <h4>李冠霖</h4>
+                        <p class="text-muted">活動長</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://www.facebook.com/profile.php?id=100000033146126&fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
                     <div class="contact-member">
                         <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
                         <h4>李冠霖</h4>

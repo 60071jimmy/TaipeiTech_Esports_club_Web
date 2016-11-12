@@ -22,4 +22,7 @@ Route::group(['middleware' => 'web'], function() {
 
 	Route::get('/admin/join','JoinController@index');
 	Route::get('/admin/join/detail/{id}','JoinController@show');
+
+	Route::get('/api/{id}','ApiController@index');
+	Route::get('/verify','VerifyController@index');
 });

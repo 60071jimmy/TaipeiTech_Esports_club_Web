@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <ul class="timeline">
                         
-                        <li class="timeline-inverted">
+                        <!--li class="timeline-inverted">
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
                             </div>
@@ -24,7 +24,7 @@
                                     <p class="text-muted">每學期期初都會舉辦交流賽，增進社員感情，同時也能和外校多多交流！</p>
                                 </div>
                             </div>
-                        </li>
+                        </li-->
                         <li>
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">

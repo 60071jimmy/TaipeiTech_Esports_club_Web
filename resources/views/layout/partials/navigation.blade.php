@@ -16,9 +16,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
+                    <!--li>
                         <a class="page-scroll" href="#about" >關於我們</a>
-                    </li>
+                    </li-->
                     <li>
                         <a class="page-scroll" href="#team" >四大團隊</a>
                     </li>
@@ -30,6 +30,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#join" >加入社團</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="" >報名認證</a>
                     </li>
                 </ul>
             </div>
