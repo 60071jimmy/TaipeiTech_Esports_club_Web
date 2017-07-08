@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
 use Illuminate\Html\FormFacade;
 use Facebook\Facebook;
+use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller
 {   
@@ -28,10 +28,36 @@ class ApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($postID)
+   
+    public function index()
+    {
+        return view('access');
+    }
+
+
+    public function show(Request $request)
     {   
-        $token="EAAU5XAe6Ii0BAM55U8oTpMWMkdOQwvtfrt0KYQBV93Tcv9Gg5ZBKC767BdBXbgHuy9EuQJaDJrEHknSHgb2DIxVab5RSPiMzJr30x9WVM9ju04Du2U9x4j5sWYvLki4ffrFeNPAQh6VKdHM5NV9Mqd9VLarMY3zxFoZCGhHwZDZD";
-        $ID='857268977677559_'.$postID;
+        /*
+        $validator = Validator::make($request->all(), [
+        'user_id' => 'required',
+        'post_id' => 'required',
+        'reactions' => 'required',
+        //'token' => 'required',
+        ]);
+        
+        if ($validator->fails()) {
+            return redirect('api')
+                ->withInput()
+                ->withErrors($validator);
+        }
+        */
+        
+        $token="EAACEdEose0cBAKZA2zT8zQzkyoFwjvF917OtohnVu3LsR7uNkLKpTF4LRUGFdYblZAVPRTm6HjcTnhjGyO8n0sLZAyXjmmktb0zPGcqUuZAFuf41jZBVSR9QdcvTROdfOSQRaN3l5zZBC9OD3U2I2sRtfYeStd4m8pnNPviMsZBYwZDZD";
+        $user_id = $request['user_id'];
+        $post_id = $request['post_id'];
+        $reaction = $request['reactions'];
+
+        $ID=$user_id."_".$post_id;
         
         $url =  ("https://graph.facebook.com/v2.8/?ids=".$ID.
             "&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),".
@@ -46,11 +72,22 @@ class ApiController extends Controller
         $json = file_get_contents($url);
         $json_data = json_decode($json, true);
         //print_r($json_data);
-        $heart_count = $json_data[$ID]['reactions_love']['summary']['total_count'];
-        $haha_count = $json_data[$ID]['reactions_haha']['summary']['total_count'];
 
-        return view('api',compact(['heart_count','haha_count','postID']));
+        $reactions_array = [
+            'LIKE' => 'reactions_like',
+            'LOVE' => 'reactions_love',
+            'WOW' => 'reactions_wow',
+            'HAHA' => 'reactions_haha',
+            'SAD' => 'reactions_sad',
+            'ANGRY' => 'reactions_angry',
+            ];
+
+        $reaction = strtoupper($reaction);
+        $count = $json_data[$ID][$reactions_array[$reaction]]['summary']['total_count'];
+
+        return view('api',compact(['count','user_id','post_id','reaction']));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -69,17 +106,6 @@ class ApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
     {
         //
     }

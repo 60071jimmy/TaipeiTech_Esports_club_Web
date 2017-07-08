@@ -33,7 +33,7 @@
                  <div class="col-sm-3">
                     <div class="contact-member">
                         <img src="img/team/4.jpg" class="img-responsive img-circle" alt="">
-                        <h4>李冠霖</h4>
+                        <h4>張育山</h4>
                         <p class="text-muted">活動長</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="https://www.facebook.com/profile.php?id=100000033146126&fref=ts" target="_blank"><i class="fa fa-facebook"></i></a>

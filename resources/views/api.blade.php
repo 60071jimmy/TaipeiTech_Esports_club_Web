@@ -1,7 +1,9 @@
 @extends('layout.master')
 
 @section('content')
-<meta http-equiv="refresh" content="5;url='http://ntut-esports.servegame.com/api/{{$postID}}" />
+
+<meta http-equiv="refresh" content="5;url='http://ntut-esports.servegame.com/api/{{$user_id}}/{{$post_id}}/{{$reaction}}" />
+@if(false)
 <style>
         html {
           box-sizing: border-box;
@@ -33,8 +35,8 @@
             left: 0;
             z-index: 10;
         }
-        .tc { text-align: center; font-size: 20rem; font-weight: bold; }
-        .wf { width: 28%; }
+        .tc { text-align: left; font-size: 4rem; font-weight: bold; }
+        .wf { width:40%; }
         .likes {
             position: absolute;
             top: 50%;
@@ -47,8 +49,8 @@
         }
         .heart img {
             position: absolute;
-            top: 90%;
-            left: 36%;
+            top: 25%;
+            left: 0%;
         }
         .happy {
             position: absolute;
@@ -81,11 +83,15 @@
             right: 10%;
         }
     </style>
-<div class="tc wf heart">{{$heart_count}}
-    <img src="/img/vote/fb-love.png">
+@endif
+<style>
+  #content {font-size: 20rem; text-align:center; line-height:600px; }
+</style>
+
+<div id="content">
+     {{$count}}
 </div>
-<div class="tc wf happy">{{$haha_count}}
-    <img src="/img/vote/fb-haha.png">
-</div>
+
+
 
 @endsection
